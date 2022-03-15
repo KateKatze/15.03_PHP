@@ -41,18 +41,23 @@
                         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
             </form>
             <!-- End of form -->
-            </div>
-            <!-- End of row -->
+
         </div>
-        <!-- End of container -->
+        <!-- End of row -->
+
+    </div>
+    <!-- End of container -->
             
-        <!-- Info -->
-        <div class="container mt-5 mb-5 p-5 border shadow text-center">
-            <!-- Name of the card -->
-            <h3 class="mb-4">My info</h3>
+    <!-- Info -->
+    <div class="container mt-5 mb-5 p-5 border shadow text-center">
+
+        <!-- Name of the card -->
+        <h3 class="mb-4">My info</h3>
+
             <!-- Row -->
             <div class="row row-cols-4 justify-content-center">
-                <!-- Div with names -->
+
+            <!-- Div with names -->
                 <div class="text-<?php echo $tcol ?>">
                 <?php
                 $tcol = "dark";
@@ -69,7 +74,8 @@
                 }
                 ?> 
                 </div>
-                <!-- Div with hobby -->
+                
+            <!-- Div with hobby -->
                 <div>
                     <?php
                     if (isset ($_GET["submit"]))
@@ -82,10 +88,10 @@
                     }        
                     ?>
                 </div>
-            </div> 
-            <!-- row div -->
-            </div>
-            <!-- container div -->
+        </div> 
+        <!-- row div -->
+    </div>
+    <!-- container div -->
 
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

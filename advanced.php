@@ -22,7 +22,7 @@
             }
 
         /* setting °F as a var, returning, using return as a var for the switch */
-            $f = 33;
+            $f = 73; //23, 33, 43, 53, 63, 73
             $return_val = weather($f);
             echo "Today we have $return_val °C";
             echo "<br> That means ";
@@ -46,7 +46,7 @@
                 $message = "it´s a hot weather! <br><br> <img src='https://cdn.pixabay.com/photo/2018/05/02/18/23/landscape-3369304__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
                 break;
                 default:
-                $message = "it´s either super cold or super hot weather! <br><br> <img src='https://cdn.pixabay.com/photo/2016/11/21/17/44/clouds-1846760__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
+                $message = "it´s super cold weather! <br><br> <img src='https://cdn.pixabay.com/photo/2020/05/11/22/45/new-york-5160499__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
             }
 
             echo $message;

@@ -9,10 +9,9 @@
     <title>PHP Day 2 Advanced</title>
 </head>
 <body>
-
-<!-- 1- Create a function that can convert °F in °C and show the result on the screen. -->
+<!-- Create a function that can convert °F in °C and show the result on the screen. -->
 <div class="container mt-5 mb-5 p-5 shadow text-center">
-<h3 class="mb-4"> Weather station </h3>
+<h3 class="mb-4 display-5"> Weather station </h3>
 <?php 
 function weather($f){
     $c = round(($f - 32) * 5/9);
@@ -23,6 +22,8 @@ $f = 95;
 $return_val = weather($f);
 echo "Today we have $return_val °C";
 echo "<br> That means ";
+
+/* changing pics and comments */
 
 switch($return_val){
     case($return_val >= 0 && $return_val <= 5):
@@ -45,10 +46,11 @@ switch($return_val){
     }
 
 echo $message;
-
 ?>
-
+<!-- end of PHP -->
 </div>
+<!--  end of container -->
+
 <!-- JS Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

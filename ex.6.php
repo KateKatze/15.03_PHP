@@ -65,9 +65,9 @@
                 if( isset($_POST['submit']))
                 {
                     $tcol = strlen($_POST["fname"]) > 5 ? "success":"danger";
-                    if( $_POST["fname"] || $_POST["lname"])
+                    if( $_POST["fname"] || $_POST["lname"] || $_POST["age"])
                     {
-                        echo "<div class='text-".$tcol."'>Welcome, ". $_POST['fname']. " ". $_POST['lname']. "!". "</div> <br />";
+                        echo "<div class='text-".$tcol."'>Welcome, ". $_POST['fname']. " ". $_POST['lname']. "!". " ". "Your age is ". $_POST['age']. " y.o.". "</div> <br /> ";
                     } else {
                             echo "<div> Please insert your name and age! </div>";
                     }

@@ -19,29 +19,29 @@ function weather($f){
     return $c;
 }
 
-$f = 55;
+$f = 95;
 $return_val = weather($f);
 echo "Today we have $return_val °C";
 echo "<br> That means ";
 
 switch($return_val){
     case($return_val >= 0 && $return_val <= 5):
-        $message = "it´s a very cold weather!";
+        $message = "it´s a very cold weather! <br><br> <img src='https://cdn.pixabay.com/photo/2016/11/21/17/44/clouds-1846760__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
         break;
     case($return_val >= 6 && $return_val <= 10):
-        $message = "it´s just a cold weather!";
+        $message = "it´s just a cold weather! <br><br> <img src='https://cdn.pixabay.com/photo/2019/08/23/07/53/umbrella-4425160__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
         break;
     case($return_val >= 11 && $return_val <= 15):
-        $message = "it´s a pleasant weather!";
+        $message = "it´s a pleasant weather! <br><br> <img src='https://cdn.pixabay.com/photo/2022/02/22/17/25/stork-7029266__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
         break;
     case($return_val >= 16 && $return_val <= 20):
-        $message = "it´s a warm weather!";
+        $message = "it´s a warm weather! <br><br> <img src='https://cdn.pixabay.com/photo/2020/05/29/22/00/field-5236879__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
         break;
     case($return_val >= 21):
-        $message = "it´s a hot weather!";
+        $message = "it´s a hot weather! <br><br> <img src='https://cdn.pixabay.com/photo/2018/05/02/18/23/landscape-3369304__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
         break;
     default:
-        $message = "it´s either super cold or super hot weather!";
+        $message = "it´s either super cold or super hot weather! <br><br> <img src='https://cdn.pixabay.com/photo/2016/11/21/17/44/clouds-1846760__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
     }
 
 echo $message;

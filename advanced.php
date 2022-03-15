@@ -19,29 +19,29 @@ function weather($f){
     return $c;
 }
 
-$f = 31;
+$f = 55;
 $return_val = weather($f);
 echo "Today we have $return_val °C";
 echo "<br> That means ";
 
 switch($return_val){
     case($return_val >= 0 && $return_val <= 5):
-        $message = "it´s very cold";
+        $message = "it´s a very cold weather!";
         break;
     case($return_val >= 6 && $return_val <= 10):
-        $message = "it´s cold";
+        $message = "it´s just a cold weather!";
         break;
     case($return_val >= 11 && $return_val <= 15):
-        $message = "it´s pleasant";
+        $message = "it´s a pleasant weather!";
         break;
     case($return_val >= 16 && $return_val <= 20):
-        $message = "it´s warm";
+        $message = "it´s a warm weather!";
         break;
     case($return_val >= 21):
-        $message = "it´s hot";
+        $message = "it´s a hot weather!";
         break;
     default:
-        $message = "it´s either super cold or super hot!";
+        $message = "it´s either super cold or super hot weather!";
     }
 
 echo $message;

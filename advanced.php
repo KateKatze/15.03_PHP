@@ -9,47 +9,51 @@
     <title>PHP Day 2 Advanced</title>
 </head>
 <body>
-<!-- Create a function that can convert °F in °C and show the result on the screen. -->
-<div class="container mt-5 mb-5 p-5 shadow text-center">
-<h3 class="mb-4 display-5"> Weather station </h3>
-<?php 
-function weather($f){
-    $c = round(($f - 32) * 5/9);
-    return $c;
-}
+    <!-- Create a function that can convert °F in °C and show the result on the screen. -->
+    <!-- Container -->
+        <div class="container mt-5 mb-5 p-5 shadow text-center">
+            <h3 class="mb-4 display-5"> Weather station </h3>
 
-$f = 95;
-$return_val = weather($f);
-echo "Today we have $return_val °C";
-echo "<br> That means ";
+    <!-- PHP starts -->
+        <?php 
+            function weather($f){
+                $c = round(($f - 32) * 5/9);
+                return $c;
+            }
 
-/* changing pics and comments */
+        /* setting °F as a var, returning, using return as a var for the switch */
+            $f = 33;
+            $return_val = weather($f);
+            echo "Today we have $return_val °C";
+            echo "<br> That means ";
 
-switch($return_val){
-    case($return_val >= 0 && $return_val <= 5):
-        $message = "it´s a very cold weather! <br><br> <img src='https://cdn.pixabay.com/photo/2016/11/21/17/44/clouds-1846760__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
-        break;
-    case($return_val >= 6 && $return_val <= 10):
-        $message = "it´s just a cold weather! <br><br> <img src='https://cdn.pixabay.com/photo/2019/08/23/07/53/umbrella-4425160__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
-        break;
-    case($return_val >= 11 && $return_val <= 15):
-        $message = "it´s a pleasant weather! <br><br> <img src='https://cdn.pixabay.com/photo/2022/02/22/17/25/stork-7029266__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
-        break;
-    case($return_val >= 16 && $return_val <= 20):
-        $message = "it´s a warm weather! <br><br> <img src='https://cdn.pixabay.com/photo/2020/05/29/22/00/field-5236879__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
-        break;
-    case($return_val >= 21):
-        $message = "it´s a hot weather! <br><br> <img src='https://cdn.pixabay.com/photo/2018/05/02/18/23/landscape-3369304__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
-        break;
-    default:
-        $message = "it´s either super cold or super hot weather! <br><br> <img src='https://cdn.pixabay.com/photo/2016/11/21/17/44/clouds-1846760__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
-    }
+        /* changing pics and comments */
 
-echo $message;
-?>
-<!-- end of PHP -->
-</div>
-<!--  end of container -->
+            switch($return_val){
+                case($return_val >= 0 && $return_val <= 5):
+                $message = "it´s a very cold weather! <br><br> <img src='https://cdn.pixabay.com/photo/2016/11/21/17/44/clouds-1846760__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
+                break;
+                case($return_val >= 6 && $return_val <= 10):
+                $message = "it´s just a cold weather! <br><br> <img src='https://cdn.pixabay.com/photo/2019/08/23/07/53/umbrella-4425160__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
+                break;
+                case($return_val >= 11 && $return_val <= 15):
+                $message = "it´s a pleasant weather! <br><br> <img src='https://cdn.pixabay.com/photo/2022/02/22/17/25/stork-7029266__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
+                break;
+                case($return_val >= 16 && $return_val <= 20):
+                $message = "it´s a warm weather! <br><br> <img src='https://cdn.pixabay.com/photo/2020/05/29/22/00/field-5236879__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
+                break;
+                case($return_val >= 21):
+                $message = "it´s a hot weather! <br><br> <img src='https://cdn.pixabay.com/photo/2018/05/02/18/23/landscape-3369304__480.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
+                break;
+                default:
+                $message = "it´s either super cold or super hot weather! <br><br> <img src='https://cdn.pixabay.com/photo/2016/11/21/17/44/clouds-1846760__340.jpg' style='border-radius: 10px; height: 150px; width: 300px;'>";
+            }
+
+            echo $message;
+        ?>
+    <!-- end of PHP -->
+    </div>
+    <!--  end of container -->
 
 <!-- JS Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

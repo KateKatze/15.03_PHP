@@ -10,7 +10,45 @@
 </head>
 <body>
 
+<!-- 1- Create a function that can convert °F in °C and show the result on the screen. -->
+<div class="container mt-5 mb-5 p-5 shadow text-center">
+<h3 class="mb-4"> Weather station </h3>
+<?php 
+function weather($f){
+    $c = round(($f - 32) * 5/9);
+    return $c;
+}
 
+$f = 31;
+$return_val = weather($f);
+echo "Today we have $return_val °C";
+echo "<br> That means ";
+
+switch($return_val){
+    case($return_val >= 0 && $return_val <= 5):
+        $message = "it´s very cold";
+        break;
+    case($return_val >= 6 && $return_val <= 10):
+        $message = "it´s cold";
+        break;
+    case($return_val >= 11 && $return_val <= 15):
+        $message = "it´s pleasant";
+        break;
+    case($return_val >= 16 && $return_val <= 20):
+        $message = "it´s warm";
+        break;
+    case($return_val >= 21):
+        $message = "it´s hot";
+        break;
+    default:
+        $message = "it´s either super cold or super hot!";
+    }
+
+echo $message;
+
+?>
+
+</div>
 <!-- JS Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

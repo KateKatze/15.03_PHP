@@ -38,7 +38,7 @@
             <div class="mb-3">
                         <input type="hobby" name="hobby" class="form-control" id="exampleInputHobby" aria-describedby="" placeholder="Hobby">
                         </div>
-                        <button type="submit" name="submit" class="btn btn-primary">Log in</button>
+                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
             </form>
             <!-- End of form -->
             </div>

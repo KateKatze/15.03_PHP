@@ -9,10 +9,7 @@
     <title>PHP Day 2</title>
 </head>
 <body>
-    <!-- PHP -->
-    
-    <!-- /*  Exercise 6: Create a form with input fields for your firstname, lastname and age. Extract the values from each input field and display them all in a separate div. Use the POST method. If the length of your name is larger than 5 characters, change the text colour to green. Otherwise, change the text-colour to red.Now extend with adding a new input field "hobbies". Use the GET method to extract and display the hobbies */ -->
-    
+       
     <!-- Container -->
     <div class="container mt-5 mb-5 p-5 border shadow text-center">
 
@@ -36,6 +33,7 @@
                         <button type="submit" name="submit" class="btn btn-primary">Log in</button>
             </form>
 
+            <!-- Hobbies form -->
             <form action="ex.6.php" method ="GET">
             <div class="mb-3">
                         <input type="hobby" name="hobby" class="form-control" id="exampleInputHobby" aria-describedby="" placeholder="Hobby">
@@ -50,9 +48,12 @@
             
         <!-- Info -->
         <div class="container mt-5 mb-5 p-5 border shadow text-center">
+            <!-- Name of the card -->
             <h3 class="mb-4">My info</h3>
+            <!-- Row -->
             <div class="row row-cols-4 justify-content-center">
-               <div class="text-<?php echo $tcol ?>">
+                <!-- Div with names -->
+                <div class="text-<?php echo $tcol ?>">
                 <?php
                 $tcol = "dark";
 
@@ -68,22 +69,23 @@
                 }
                 ?> 
                 </div>
-            
-                    <div>
-                        <?php
-                                if (isset ($_GET["submit"]))
-                                    {
-                                if ($_GET["hobby"]){
-                                echo "Your hobby is:  ". $_GET['hobby']. " ";
-                                } else {
-                                echo "Please type your hobby!";
-                                }
-                                }        
-                        ?>
-                    </div>
+                <!-- Div with hobby -->
+                <div>
+                    <?php
+                    if (isset ($_GET["submit"]))
+                    {
+                    if ($_GET["hobby"]){
+                    echo "Your hobby is:  ". $_GET['hobby']. " ";
+                    } else {
+                    echo "Please type your hobby!";
+                    }
+                    }        
+                    ?>
+                </div>
             </div> 
+            <!-- row div -->
             </div>
-            </div>  
+            <!-- container div -->
 
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
